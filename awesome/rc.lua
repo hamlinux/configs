@@ -37,7 +37,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("~/git/awesome/themes/zenburn/theme.lua")
+beautiful.init("~/git/awesome/themes/@@@/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
