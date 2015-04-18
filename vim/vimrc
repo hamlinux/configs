@@ -1,0 +1,4 @@
+" vimrci
+
+" This will display line numbers along the left side of a window: 
+set number
