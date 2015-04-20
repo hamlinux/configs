@@ -43,7 +43,7 @@ end
 beautiful.init("~/.config/awesome/themes/matrix/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "gnome-terminal"
+terminal = "terminator"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -85,7 +85,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "WEB", "SECURITY", "NEWS", "MAIL", "DEV", 6, 7, 8, 9 }, s, layouts[1])
+    tags[s] = awful.tag({ "WEB", "DEVOPS", "NEWS", "MAIL", "SECURITY", 6, 7, 8, 9 }, s, layouts[1])
 end
 -- }}}
 
@@ -151,7 +151,7 @@ mytasklist.buttons = awful.util.table.join(
                                                   instance = nil
                                               else
                                                   instance = awful.menu.clients({
-                                                      theme = { width = 250 }
+                                                      theme = { width = 350 }
                                                   })
                                               end
                                           end),
@@ -275,6 +275,9 @@ globalkeys = awful.util.table.join(
 
 	-- My Keybindings
 	awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn("firefox") end),
+	awful.key({ modkey, "Shift" }, "k", function () awful.util.spawn("keepassx") end),
+	awful.key({ modkey, "Shift" }, "f", function () awful.util.spawn("pcmanfm") end),
+	awful.key({ modkey, "Shift" }, "s", function () awful.util.spawn("scribus") end),
 
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end)
