@@ -272,6 +272,10 @@ globalkeys = awful.util.table.join(
                   awful.util.eval, nil,
                   awful.util.getdir("cache") .. "/history_eval")
               end),
+
+	-- My Keybindings
+	awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn("firefox") end),
+
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end)
 )
